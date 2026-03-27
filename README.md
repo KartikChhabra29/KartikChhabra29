@@ -126,26 +126,6 @@ Python Scripting    ████████████░░░░░░░░
 Penetration Testing ███████████░░░░░░░░░  55%
 ```
 
----
-
-## 📊 Live GitHub Command Center
-
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=kartikchhabra&show_icons=true&theme=github_dark&border_color=00ff99&title_color=00ff99&icon_color=00ff99&text_color=8bffd5&bg_color=0d1117" alt="GitHub Stats" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kartikchhabra&layout=compact&theme=github_dark&border_color=00ff99&title_color=00ff99&text_color=8bffd5&bg_color=0d1117" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=kartikchhabra&bg_color=0d1117&color=00ff99&line=00ff99&point=00ffcc&area=true&hide_border=false&border_color=00ff99" alt="Contribution Graph" />
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=kartikchhabra&theme=github-dark-blue&border=00ff99&ring=00ff99&fire=00ffcc&currStreakLabel=00ff99&sideLabels=8bffd5" alt="GitHub Streak" />
-  <img width="49%" src="https://raw.githubusercontent.com/kartikchhabra/kartikchhabra/profile-summary-card-output/github_dark/4-productive-time.svg" alt="Productive time" />
-</p>
-
----
-
 ## 🏆 GitHub Trophies
 
 <p align="center">
