@@ -158,35 +158,53 @@ Penetration Testing ███████████░░░░░░░░░
 
 ---
 
-## 🎓 Certification Radar
+<h2 align="center" style="color:#00ff99; font-family:monospace;">
+🧠 CERTIFICATION RADAR
+</h2>
 
-<table>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/✓-Network%20Configuration%20%26%20Management-0d1117?style=flat-square&logoColor=00ff99&labelColor=0d1117&color=00ff99" /><br/>
-      <sub>Quick Heal</sub>
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/✓-IT%20Fundamentals-0d1117?style=flat-square&logoColor=00ff99&labelColor=0d1117&color=00ff99" /><br/>
-      <sub>Quick Heal</sub>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://img.shields.io/badge/✓-Pre%20Security-0d1117?style=flat-square&logo=tryhackme&logoColor=00ff99&labelColor=0d1117&color=00ff99" /><br/>
-      <sub>TryHackMe</sub>
-    </td>
-    <td>
-      <img src="https://img.shields.io/badge/✓-Certified%20AI%20Security%20%26%20Risk%20(CAISR)-0d1117?style=flat-square&logoColor=00ff99&labelColor=0d1117&color=00ff99" /><br/>
-      <sub>CAISR</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <img src="https://img.shields.io/badge/✓-Foundations%20of%20Cybersecurity-0d1117?style=flat-square&logo=Harvard&logoColor=00ff99&labelColor=0d1117&color=00ff99" /><br/>
-      <sub>Harvard CS50</sub>
-    </td>
-  </tr>
+<table align="center" style="border:1px solid #00ff99; border-collapse:collapse; font-family:monospace; background-color:#020806;">
+
+<tr>
+<td style="padding:15px; border:1px solid #00ff99; color:#8bffd5;">
+
+✔ <span style="color:#00ff99;">Network Configuration & Management</span><br/>
+<sub style="color:#7cffcb;">Quick Heal</sub>
+
+</td>
+
+<td style="padding:15px; border:1px solid #00ff99; color:#8bffd5;">
+
+✔ <span style="color:#00ff99;">IT Fundamentals</span><br/>
+<sub style="color:#7cffcb;">Quick Heal</sub>
+
+</td>
+</tr>
+
+<tr>
+<td style="padding:15px; border:1px solid #00ff99; color:#8bffd5;">
+
+✔ <span style="color:#00ff99;">Pre Security</span><br/>
+<sub style="color:#7cffcb;">TryHackMe</sub>
+
+</td>
+
+<td style="padding:15px; border:1px solid #00ff99; color:#8bffd5;">
+
+✔ <span style="color:#00ff99;">Certified AI Security & Risk (CAISR)</span><br/>
+<sub style="color:#7cffcb;">Red Team Leaders</sub>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="padding:15px; border:1px solid #00ff99; color:#8bffd5; text-align:center;">
+
+✔ <span style="color:#00ff99;">Foundations of Cybersecurity</span><br/>
+<sub style="color:#7cffcb;">Harvard CS50</sub>
+
+</td>
+</tr>
+
 </table>
 
 ---
