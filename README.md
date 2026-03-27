@@ -193,7 +193,7 @@ Penetration Testing ███████████░░░░░░░░░
 ## 🌐 Connect
 
 <p align="left">
-  <a href="mailto:kartikchhabra@gmail.com">
+  <a href="mailto:kartikchhabra055@gmail.com">
     <img src="https://img.shields.io/badge/📧%20Email-kartikchhabra%40gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=00ff99&labelColor=0d1117" />
   </a>
 </p>
