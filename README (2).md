@@ -61,14 +61,41 @@ $ status --current
 
 ---
 
-## ⚔️ Threat Operations Matrix
+<h2 align="center" style="color:#00ff99;">⚔️ THREAT OPERATIONS MATRIX</h2>
 
-| Layer | Focus | Capabilities |
-|---|---|---|
-| Recon | Information Gathering | OSINT, Subdomain Enumeration, Footprinting |
-| Offensive | Attack Simulation | Web App Pentesting, Bug Hunting, Exploit Testing |
-| Defensive | Security Awareness | Threat Analysis, Vulnerability Reporting |
-| Tooling | Automation | Python Scripts, Custom Security Tools |
+<table align="center" style="border:1px solid #00ff99; border-collapse:collapse; font-family:monospace;">
+
+<tr style="background-color:#020806; color:#00ff99;">
+  <th style="padding:10px; border:1px solid #00ff99;">LAYER</th>
+  <th style="padding:10px; border:1px solid #00ff99;">FOCUS</th>
+  <th style="padding:10px; border:1px solid #00ff99;">CAPABILITIES</th>
+</tr>
+
+<tr style="background-color:#010504; color:#8bffd5;">
+  <td style="padding:10px; border:1px solid #00ff99;">RECON</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Information Gathering</td>
+  <td style="padding:10px; border:1px solid #00ff99;">OSINT, Subdomain Enumeration, Footprinting</td>
+</tr>
+
+<tr style="background-color:#020806; color:#7cffcb;">
+  <td style="padding:10px; border:1px solid #00ff99;">OFFENSIVE</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Attack Simulation</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Web App Pentesting, Bug Hunting, Exploit Testing</td>
+</tr>
+
+<tr style="background-color:#010504; color:#8bffd5;">
+  <td style="padding:10px; border:1px solid #00ff99;">DEFENSIVE</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Security Awareness</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Threat Analysis, Vulnerability Reporting</td>
+</tr>
+
+<tr style="background-color:#020806; color:#7cffcb;">
+  <td style="padding:10px; border:1px solid #00ff99;">TOOLING</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Automation</td>
+  <td style="padding:10px; border:1px solid #00ff99;">Python Scripts, Custom Security Tools</td>
+</tr>
+
+</table>
 
 ---
 
