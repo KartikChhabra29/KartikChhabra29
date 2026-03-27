@@ -9,8 +9,13 @@ For profile README, place this file in repo: github.com/<username>/<username>
   <img src="assets/kartik_chhabra_cyberhacker_banner.svg" width="100%" />
 </p>
 
-<h1 align="center">KARTIK CHHABRA</h1>
-<h3 align="center">Hacker | Penetration Tester | Bug Hunter | Web Security Researcher</h3>
+<h1 align="center" style="color:#00ff99; font-family:monospace;">
+  KARTIK CHHABRA
+</h1>
+
+<h3 align="center" style="color:#8bffd5; font-family:monospace;">
+  Hacker | Penetration Tester | Bug Hunter | Web Security Researcher
+</h3>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=23&pause=800&color=00FF99&center=true&vCenter=true&width=1200&lines=Penetration+Testing+%7C+Bug+Bounty+%7C+Web+Security;Learning+Offensive+Security+%7C+Building+Tools;Networking+%7C+Kali+Linux+%7C+Python;Hacker+in+Progress+%7C+Always+Learning" alt="Typing animation" />
