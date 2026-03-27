@@ -125,7 +125,7 @@ Penetration Testing ███████████░░░░░░░░░
 </p>
 
 <p align="center">
-  <img width="98%" src="./assets/github-trophies-panel.svg" alt="GitHub trophies panel" />
+
 </p>
 
 ---
