@@ -9,11 +9,9 @@ For profile README, place this file in repo: github.com/<username>/<username>
   <img src="assets/kartik_chhabra_cyberhacker_banner.svg" width="100%" />
 </p>
 
-<p align="center">
-  <span style="color:#00ff99; font-size:40px; font-weight:bold; text-shadow:0 0 8px #00ff99;">
-    KARTIK CHHABRA
-  </span>
-</p>
+<h1 align="center" style="color:#00ff99;">
+  KARTIK CHHABRA
+</h1>
 
 <h3 align="center" style="color:#8bffd5; font-family:monospace;">
   Hacker | Penetration Tester | Bug Hunter | Web Security Researcher
