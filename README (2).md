@@ -125,6 +125,7 @@ Penetration Testing ███████████░░░░░░░░░
 </p>
 
 <p align="center">
+ <img src="assets/kartik_chhabra_cyberhacker_banner.svg" width="100%" />
 
 </p>
 
