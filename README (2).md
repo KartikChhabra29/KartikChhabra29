@@ -5,7 +5,7 @@ For profile README, place this file in repo: github.com/<username>/<username>
 -->
 
 <p align="center">
-  <img src="./assets/cyber-hacker-3d.svg" alt="Hacker 3D Animated Banner" width="100%" />
+  <img src="assets/kartik_chhabra_cyberhacker_banner.svg" width="100%" />
 </p>
 
 <h1 align="center">KARTIK CHHABRA</h1>
