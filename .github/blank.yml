@@ -1,0 +1,187 @@
+# ============================================================
+#  K4RTIK CHHABRA — GitHub Profile CI Workflow
+#  Auto-validates SVG banners, lints code, and deploys assets
+# ============================================================
+
+name: 🛡️ Profile CI — Build & Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+
+  # ─────────────────────────────────────────
+  #  JOB 1 — Validate SVG & HTML assets
+  # ─────────────────────────────────────────
+  validate-assets:
+    name: 🔍 Validate SVG & HTML
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 📦 Install SVG validator
+        run: npm install -g svgo
+
+      - name: ✅ Lint & optimize SVG files
+        run: |
+          echo "🔎 Scanning for SVG files..."
+          find . -name "*.svg" | while read file; do
+            echo "  → Validating: $file"
+            svgo --disable=removeViewBox "$file" --output "$file"
+          done
+          echo "✅ All SVG files validated."
+
+      - name: 📋 List all assets
+        run: |
+          echo "📁 Project structure:"
+          find . -not -path './.git/*' -type f | sort
+
+  # ─────────────────────────────────────────
+  #  JOB 2 — Security scan
+  # ─────────────────────────────────────────
+  security-scan:
+    name: 🔐 Security Scan
+    runs-on: ubuntu-latest
+    needs: validate-assets
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🛡️ Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '0'
+
+      - name: 🔍 Check for secrets/sensitive data
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --only-verified
+
+  # ─────────────────────────────────────────
+  #  JOB 3 — Build & bundle
+  # ─────────────────────────────────────────
+  build:
+    name: 🏗️ Build Project
+    runs-on: ubuntu-latest
+    needs: validate-assets
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found — skipping npm install."
+          fi
+
+      - name: 🔨 Build
+        run: |
+          if [ -f package.json ] && npm run | grep -q "build"; then
+            npm run build
+          else
+            echo "ℹ️ No build script found — skipping build step."
+          fi
+
+      - name: 📤 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            dist/
+            *.svg
+            *.html
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # ─────────────────────────────────────────
+  #  JOB 4 — Deploy to GitHub Pages
+  # ─────────────────────────────────────────
+  deploy:
+    name: 🚀 Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [ build, security-scan ]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🗂️ Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📦 Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+        continue-on-error: true
+
+      - name: 📤 Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: 🌐 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # ─────────────────────────────────────────
+  #  JOB 5 — Notify on success/failure
+  # ─────────────────────────────────────────
+  notify:
+    name: 📣 Status Notify
+    runs-on: ubuntu-latest
+    needs: [ build, security-scan, deploy ]
+    if: always()
+
+    steps:
+      - name: ✅ Print workflow summary
+        run: |
+          echo "============================================"
+          echo "  🛡️  K4RTIK PROFILE — WORKFLOW COMPLETE"
+          echo "============================================"
+          echo "  Branch  : ${{ github.ref_name }}"
+          echo "  Commit  : ${{ github.sha }}"
+          echo "  Trigger : ${{ github.event_name }}"
+          echo "  Actor   : ${{ github.actor }}"
+          echo "  Status  : ${{ job.status }}"
+          echo "============================================"
