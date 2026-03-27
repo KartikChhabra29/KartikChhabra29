@@ -12,9 +12,6 @@ For profile README, place this file in repo: github.com/<username>/<username>
 <h1 align="center" style="color:#00ff99;">
   KARTIK CHHABRA
 </h1>
-<p align="center" style="color:#00ff99; opacity:0.2; margin-top:-20px;">
-  KARTIK CHHABRA
-</p>
 
 <h3 align="center" style="color:#8bffd5; font-family:monospace;">
   Hacker | Penetration Tester | Bug Hunter | Web Security Researcher
